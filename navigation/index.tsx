@@ -15,9 +15,8 @@ import LinkingConfiguration from './LinkingConfiguration';
 import {
   Octicons,
   MaterialCommunityIcons,
-  MaterialIcons,
-  FontAwesome5,
 } from '@expo/vector-icons';
+import ChatRoomScreen from '../screens/ChatRoomScreen';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -29,8 +28,6 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
   );
 }
 
-// A root stack navigator is often used for displaying modals on top of all other content
-// Read more here: https://reactnavigation.org/docs/modal
 const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
@@ -61,6 +58,21 @@ function RootNavigator() {
             </View>
           )
         }} />
+        <Stack.Screen name="ChatRoomScreen" component={ChatRoomScreen} options={({route}) => ({
+          title: route.params.name,
+          headerRight: () => (
+            <View style={{
+              flexDirection: 'row',
+              width: 100,
+              justifyContent: 'space-between',
+              marginRight: 10,
+            }}>
+              <MaterialCommunityIcons name="video" size={22} color={'white'} />
+              <MaterialCommunityIcons name="phone" size={22} color={'white'} />
+              <MaterialCommunityIcons name="dots-vertical" size={22} color={'white'} />
+            </View>
+          )
+        })} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );

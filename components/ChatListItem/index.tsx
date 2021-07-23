@@ -1,6 +1,7 @@
 import React from 'react'
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TouchableWithoutFeedback } from 'react-native';
 import moment from "moment";
+import { useNavigation } from '@react-navigation/native';
 import Users from '../../data/Users';
 import { ChatRoom } from "../../types";
 import styles from './style';
@@ -14,7 +15,17 @@ const ChatListItem = (props: ChatListItemProps) => {
 
     const user = chatRoom.users[1];
 
+    const navigation = useNavigation();
+
+    const onClick = () => {
+        navigation.navigate('ChatRoomScreen', {
+            id: chatRoom.id,
+            name: user.name,
+        })
+      }
+
     return (
+        <TouchableWithoutFeedback onPress={onClick}>
         <View style={styles.container}>
             <View style={styles.lefContainer}>
                 <Image
@@ -30,6 +41,7 @@ const ChatListItem = (props: ChatListItemProps) => {
             </View>
             <Text style={styles.time}>{moment(chatRoom.lastMessage.createdAt).format("DD/MM/YYYY")}</Text>
         </View>
+        </TouchableWithoutFeedback>
     );
 };
 

@@ -10,6 +10,11 @@
       "StackName": "amplify-waclone-dev-125405",
       "StackId": "arn:aws:cloudformation:ap-south-1:821462348599:stack/amplify-waclone-dev-125405/784e95e0-ede2-11eb-9dec-061cb2e89d04",
       "AmplifyAppId": "dfla9utyv67n7"
+    },
+    "categories": {
+      "auth": {
+        "waclone8335132b": {}
+      }
     }
   }
 }

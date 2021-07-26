@@ -1,1 +1,10 @@
-{}
+{
+  "auth": {
+    "waclone8335132b": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

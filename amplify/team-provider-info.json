@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-waclone-dev-125405-authRole",
+      "UnauthRoleArn": "arn:aws:iam::821462348599:role/amplify-waclone-dev-125405-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::821462348599:role/amplify-waclone-dev-125405-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-waclone-dev-125405-deployment",
+      "UnauthRoleName": "amplify-waclone-dev-125405-unauthRole",
+      "StackName": "amplify-waclone-dev-125405",
+      "StackId": "arn:aws:cloudformation:ap-south-1:821462348599:stack/amplify-waclone-dev-125405/784e95e0-ede2-11eb-9dec-061cb2e89d04",
+      "AmplifyAppId": "dfla9utyv67n7"
+    }
+  }
+}
